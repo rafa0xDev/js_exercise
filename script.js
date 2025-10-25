@@ -95,3 +95,23 @@ function hurufTerbanyak(str) {
 }
 
 hurufTerbanyak("saya");
+
+function reverseString(str){
+    return str.split('').reverse().join('');
+}
+console.log(reverseString("Hello World")); // Output: "dlroW olleH"
+
+function isPalindrome(str){
+  const cleanStr = str.toLowerCase().replace(/[^a-z0-9]/g, '');
+  const reversed = cleanStr.split('').reverse().join('');
+  return cleanStr === reversed;
+}
+console.log(isPalindrome("katak")); // Output: true
+console.log(isPalindrome("Hello")); // Output: false
+console.log(isPalindrome("Son to lo yo"))
+console.log(isPalindrome("natan"))
+
+function removeDuplicates(arr){
+  const filtered = arr.filter((item, index) => arr.indexOf(item) === index);
+  return filtered
+}

@@ -115,3 +115,13 @@ function removeDuplicates(arr){
   const filtered = arr.filter((item, index) => arr.indexOf(item) === index);
   return filtered
 }
+
+/*const mathrandom = Math.floor(Math.random() * 10) + 1;
+const tebakanStr = prompt("tebak angka antara 1-10");
+const tebakan = Number(tebakanStr);
+
+if (tebakan === mathrandom){
+  console.log("Selamat! Tebakan Anda benar.");
+} else {
+  console.log(`Maaf, tebakan Anda salah. Angka yang benar adalah ${mathrandom}.`);
+}*/

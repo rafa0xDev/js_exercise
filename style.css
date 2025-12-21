@@ -1,0 +1,51 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    gap: 50px;
+}
+
+.box1 {
+    width: 200px;
+    height: 200px;
+    background-color: #ACD8FF;
+    border-radius: 25px;
+    border: 5px solid #0066FF;
+    transition: 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 0 7px 5px rgba(0, 140, 255, 0.868);
+    /*angka pertama jika "-" maka dikiri dan sebaliknya bayangannya, angka kedua jika "-" maka diatas bayangannya, angka ketiga untuk ukuran blur(makin tinggi makin blur), angka keempat(opsional) = ukuran bayangan*/ 
+}
+
+
+.box1:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(0, 140, 255, 0.868);
+}
+
+.box2 {
+    width: 200px;
+    height: 200px;
+    background-color: #FFCCE6;
+    border-radius: 25px;
+    border: 5px solid #FF3399;
+    position: relative;
+}
+
+.box2::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    height: 4px;
+    width: 0;
+    background-color: #FF3399;
+    border-radius: 2px;
+    transition: width 0.4s ease;
+}
+
+.box2:hover::after {
+    width: 100%;
+}
